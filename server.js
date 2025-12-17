@@ -6,6 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Luz está despierta 🤍");
+});
+
 app.post("/chat", async (req, res) => {
   const userMessage = req.body.message;
 
